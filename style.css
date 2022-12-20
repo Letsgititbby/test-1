@@ -1,16 +1,335 @@
-/* Add parallax animation to images */
-.parallax {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+/* diamond animation */
+@keyframes diamond {
+    0% {
+      transform: rotate(45deg);
+    }
+    100% {
+      transform: rotate(405deg);
+    }
   }
   
-  /* Add Aurora gradients to important words */
-  .aurora {
-    background: linear-gradient(to right, #fdbb2d, #22c1c3);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  /* apply diamond animation to title */
+  .title {
+    animation: diamond 2s infinite;
   }
+ 
+  /* aurora gradient animation */
+@keyframes aurora {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  /* smoothly change background color on hover */
+.button {
+    transition: background-color 0.2s;
+  }
+  
+  .button:hover {
+    background-color: #666;
+  }
+  
+  /* basic style reset */ * {
+    margin: 0;
+    padding: 0;
+   box-sizing: border-box;
+  }
+  
+  /* responsive design techniques /
+  @media (max-width: 768px) {
+  / make header and footer full width on small screens */
+  header,
+  footer {
+  width: 100%;
+  }
+  
+  /* stack logo and navigation menu vertically on small screens */
+  header .logo {
+  display: block;
+  margin: 0 auto 20px;
+  }
+  header nav {
+  display: block;
+  text-align: center;
+  }
+  header nav ul {
+  display: block;
+  }
+  header nav li {
+  display: block;
+  margin: 10px 0;
+  }
+  header nav li a {
+  display: block;
+  }
+  
+  /* stack newsletter signup form and social media links vertically on small screens */
+  footer .newsletter,
+  footer .social-media {
+  display: block;
+  text-align: center;
+  }
+  
+  
+  /* header styles */
+  header {
+  background-color: #FFD4E9;
+  color: #FFF;
+  padding: 20px 0;
+  }
+  
+  .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  }
+  
+  header .logo {
+  float: left;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #FFF;
+  }
+  
+  header nav {
+  float: right;
+  }
+  
+  header nav ul {
+  display: flex;
+  }
+  
+  header nav li {
+  list-style: none;
+  margin-left: 20px;
+  }
+  
+  header nav li a {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 1.2em;
+  transition: color 0.2s;
+  }
+  
+  header nav li a:hover {
+  color: #666;
+  }
+  
+  header form {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  }
+  
+  header input[type="text"] {
+  width: 200px;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #FFF;
+  border-radius: 20px 0 0 20px;
+  color: #FFF;
+  font-size: 1em;
+  background-color: transparent;
+  }
+  
+  header button[type="submit"] {
+  width: 80px;
+  height: 40px;
+  background-color: #D1EBFF;
+  border: 1px solid #D1EBFF;
+  border-radius: 0 20px 20px 0;
+  color: #FFF;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  }
+  
+  header button[type="submit"]:hover {
+  background-color: #666;
+  }
+  
+  /* main content styles */
+  main {
+  background-color: #FFF8E3;
+  padding: 40px 0;
+  }
+  
+  .random-fact {
+  text-align: center;
+  }
+  random-fact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    }
+    
+    .random-fact p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #FFD4E9;
+    }
+    
+    .featured-post {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    }
+    
+    .featured-post img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    }
+    
+    .featured-post h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    }
+    
+    .featured-post p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.5;
+    }
+    
+    .featured-post .button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #D1EBFF;
+    border: none;
+    border-radius: 20px;
+    color: #FFF;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    }
+    
+    .featured-post .button:hover {
+    background-color: #666;
+    }
+    
+    .recommended-products {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    }
+    
+    .product {
+    width: 300px;
+    text-align: center;
+    }
+    
+    .product img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    }
+    
+    .product h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    }
+    
+    .product p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.5;
+    }
+    
+    .product .button {
+    display: block;
+    margin: 10px auto 0;
+    padding: 10px 20px;
+    background-color: #D1EBFF;
+    border: none;
+    border-radius: 20px;
+    color: #FFF;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    }
+    
+    .product .button:hover {
+    background-color: #666;
+    }
+    
+    /* footer styles */
+    footer {
+    background-color: #FFD4E9;
+    color: #FFF;
+    padding: 40px 0;
+    }
+    
+    .newsletter h2,
+    .social-media h2 {
+    font-size:1.5em;
+    margin-bottom: 20px;
+    }
+    
+    .newsletter form {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 400px;
+    }
+    
+    .newsletter input[type="email"] {
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #FFF;
+    border-radius: 20px 0 0 20px;
+    color: #FFF;
+    font-size: 1em;
+    background-color: transparent;
+    }
+    
+    .newsletter button[type="submit"] {
+    width: 80px;
+    height: 40px;
+    background-color: #D1EBFF;
+    border: 1px solid #D1EBFF;
+    border-radius: 0 20px 20px 0;
+    color: #FFF;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    }
+    
+    .newsletter button[type="submit"]:hover {
+    background-color: #666;
+    }
+    
+    .social-media .icons {
+    display: flex;
+    margin: 0 auto;
+    max-width: 300px;
+    }
+    
+    .social-media .icons a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    }
+    
+    .social-media .icons img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    }
 
   
