@@ -1,125 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lollipop Pom - A Pet Blog for Pomeranian Owners</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- davinci engine for interactive elements -->
-  <script src="davinci-engine.js"></script>
-</head>
-<body>
-  <!-- header -->
-  <header>
-    <div class="container">
-      <a href="#" class="logo">Lollipop Pom</a>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Care Tips</a></li>
-          <li><a href="#">Training</a></li>
-          <li><a href="#">Health</a></li>
-          <li><a href="#">Blog</a></li>
-        </ul>
-      </nav>
-      <form>
-        <input type="text" placeholder="Search">
-        <button type="submit" class="button">Go</button>
-      </form>
-    </div>
-  </header>
-  <!-- end header -->
-
-  <!-- main content section -->
-  <main>
-    <div class="container">
-      <!-- random fact generator -->
-      <div class="random-fact">
-        <h2>Fun Pomeranian Fact:</h2>
-        <p id="fact"></p>
+<html>
+  <head>
+    <title>Pomeranian Blog</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Pomeranian Blog</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Pomeranians</a></li>
+        <li><a href="#">Pomeranian Care</a></li>
+        <li><a href="#">Pomeranian Facts</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="post">
+        <img src="pomeranian-1.jpg" alt="Pomeranian" />
+        <h2>Welcome to our Pomeranian blog!</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+          ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non
+          massa sem. Etiam finibus odio quis feugiat facilisis.
+        </p>
       </div>
-      <!-- end random fact generator -->
-
-      <!-- featured post -->
-      <div class="featured-post">
-        <img src="featured-post.jpg" alt="Featured post image">
-        <div>
-          <h3>Featured Post:</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas convallis dolor in justo semper, at fermentum dui malesuada.</p>
-          <a href="#" class="button">Read More</a>
-        </div>
+      <div class="post">
+        <img src="pomeranian-2.jpg" alt="Pomeranian" />
+        <h2>About Pomeranians</h2>
+        <p>
+          Pomeranians are small, fluffy dogs with a friendly and playful
+          personality. They are intelligent and energetic, and make great
+          companions for people of all ages. Pomeranians are also known for their
+          long, thick coats, which require regular grooming to maintain their
+          fluffy appearance.
+        </p>
       </div>
-      <!-- end featured post -->
-
-      <!-- recommended products -->
-      <h2>Recommended Products:</h2>
-      <section class="recommended-products">
-        <div class="product">
-          <img src="product1.jpg" alt="Product image">
-          <h3>Product 1</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas convallis dolor in justo semper, at fermentum dui malesuada.</p>
-          <a href="#" class="button">Buy on Amazon</a>
-          <a href="#" class="button">Buy on Chewy</a>
-        </div>
-        <div class="product">
-          <img src="product2.jpg" alt="Product image">
-          <h3>Product 2</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas convallis dolor in justo semper, at fermentum dui malesuada.</p>
-          <a href="#" class="button">Buy on Amazon</a>
-          <a href="#" class="button">Buy on Chewy</a>
-          </div>
-          <div class="product">
-          <img src="product3.jpg" alt="Product image">
-          <h3>Product 3</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas convallis dolor in justo semper, at fermentum dui malesuada.</p>
-          <a href="#" class="button">Buy on Amazon</a>
-          <a href="#" class="button">Buy on Chewy</a>
-          </div>
-          <div class="product">
-          <img src="product4.jpg" alt="Product image">
-          <h3>Product 4</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas convallis dolor in justo semper, at fermentum dui malesuada.</p>
-          <a href="#" class="button">Buy on Amazon</a>
-          <a href="#" class="button">Buy on Chewy</a>
-          </div>
-          </section>
-          <!-- end recommended products -->
-          </div>
-          
-            </main>
-            <!-- end main content section -->
-            <!-- footer -->
-            <footer>
-              <div class="container">
-                <!-- newsletter signup form -->
-                <div class="newsletter">
-                  <h2>Sign Up for Our Newsletter:</h2>
-                  <form>
-                    <input type="email" placeholder="Enter your email">
-                    <button type="submit" class="button">Sign Up</button>
-                  </form>
-                </div>
-                <!-- end newsletter signup form -->
-                  <!-- social media links -->
-  <div class="social-media">
-    <h2>Follow Us on Social Media:</h2>
-    <div class="icons">
-      <a href="#"><img src="instagram.png" alt="Instagram icon"></a>
-      <a href="#"><img src="youtube.png" alt="YouTube icon"></a>
-      <a href="#"><img src="twitter.png" alt="Twitter icon"></a>
-    </div>
-  </div>
-  <!-- end social media links -->
-</div>
-</footer>
-<!-- end footer -->
-<!-- davinci engine script for random fact generator -->
-<script>
-  // generate random fact using davinci engine
-  const fact = document.querySelector('#fact');
-  fact.textContent = davinci.generateRandomFact();
-</script>
-</body>
+      <div class="post">
+        <img src="pomeranian-3.jpg" alt="Pomeranian" />
+        <h2>Pomeranian Care</h2>
+        <p>
+          Caring for a Pomeranian requires a few special considerations.
+          Pomeranians have a high energy level and need daily exercise, such as
+          walks or playtime. They also require regular grooming to maintain their
+          thick coats. Pomeranians are prone to certain health issues, such as
+          dental problems and skin allergies, so it is important to keep a close
+          eye on their health and visit the veterinarian regularly.
+        </p>
+      </div>
+    </main>
+    <aside>
+      <h3>Pom Facts</h3>
+      <button id="pom-fact-button">Get a Pom Fact</button>
+      <div id="pom-fact"></div>
+    </aside>
+    <footer>
+      <p>Copyright 2022 Pomeranian Blog</p>
+    </footer>
+  </body>
 </html>
- 
