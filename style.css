@@ -1,0 +1,16 @@
+/* Add parallax animation to images */
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Add Aurora gradients to important words */
+  .aurora {
+    background: linear-gradient(to right, #fdbb2d, #22c1c3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  
