@@ -21,47 +21,19 @@
       </div>
     </header>
     <main>
-      <section id="hero">
+      <section id="hero" style="background-color: #ffa07a;">
         <div class="container">
-          <h2>Welcome to the Pomeranian Fan Blog</h2>
-          <p>Here you'll find all the latest news, information, and resources about Pomeranians. Whether you're a seasoned owner or just considering getting a Pom, this is the place for you.</p>
-          <button>Explore the Blog</button>
+          <h2 style="color: #ffffff;">Welcome to the Pomeranian Fan Blog</h2>
+          <p style="color: #ffffff;">Here you'll find all the latest news, information, and resources about Pomeranians. Whether you're a seasoned owner or just considering getting a Pom, this is the place for you.</p>
+          <button style="background-color: #ffffff; color: #ffa07a;">Explore the Blog</button>
         </div>
       </section>
-      </div>
-
-<script>
-  const pomFactsButton = document.querySelector('#pom-facts-button');
-  const pomFact = document.querySelector('#pom-fact');
-
-  // Array of Pomeranian facts
-  const pomFacts = [
-    'Pomeranians are named after the Pomerania region in Europe.',
-    'Pomeranians are intelligent and easily trained.',
-    'Pomeranians are energetic and need daily exercise.',
-    'Pomeranians are known for their fluffy, long coats.',
-    'Pomeranians are considered small dogs, weighing between 3-7 pounds.'
-  ];
-
-  pomFactsButton.addEventListener('click', event => {
-    // Generate a random index to choose a Pomeranian fact
-    const randomIndex = Math.floor(Math.random() * pomFacts.length);
-
-    // Insert the Pomeranian fact into the element
-    pomFact.innerHTML = pomFacts[randomIndex];
-
-    // Toggle the visibility of the pom fact element
-    pomFact.style.display = pomFact.style.display === 'none' ? 'block' : 'none';
-  });
-</script>
       <section id="about">
         <div class="container">
           <h2>About the Pomeranian Fan Blog</h2>
           <p>The Pomeranian Fan Blog is a labor of love for Pomeranians and their owners. We believe that Pomeranians are truly special dogs and deserve to be celebrated. That's why we created this blog – to share information, stories, and resources about these amazing creatures.</p>
           <p>We hope you enjoy exploring the Pomeranian Fan Blog and learning more about these wonderful animals. If you have any questions or comments, don't hesitate to reach out to us through the contact form or social media.</p>
-        </div>
-      </section>
-      <section id="blog-preview">
+          <section id="blog-preview">
         <div class="container">
           <h2>Recent Posts</h2>
           <div class="blog-preview-grid">
@@ -94,12 +66,12 @@
             <input type="email" id="email" /><br />
             <label for="message">Message:</label><br />
             <textarea id="message"></textarea><br />
-            <button type="submit">Send</button>
+            <button type="submit" style="background-color: #ffa07a; color: #ffffff;">Send</button>
           </form>
         </div>
       </section>
     </main>
-    <footer>
+    <footer style="background-color: #ffffff;">
       <div class="container">
         <p>Copyright 2021 Pomeranian Fan Blog. All rights reserved.</p>
         <ul>
@@ -111,13 +83,4 @@
     </footer>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
 
