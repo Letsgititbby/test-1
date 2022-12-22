@@ -1,41 +1,31 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <title>Pomeranian Blog</title>
-</head>
-<body>
-  <header>
-    <h1>Pomeranian Blog</h1>
-  </header>
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-  <main>
-    <section class="masonry">
-      <article>
-        <img src="pomeranian-1.jpg" alt="A cute pomeranian with a fluffy coat">
-        <h2>How to groom a pomeranian</h2>
-        <p>Learn the best techniques for grooming your pomeranian's fluffy coat.</p>
-      </article>
-      <article>
-        <img src="pomeranian-2.jpg" alt="A pomeranian standing on a grassy field">
-        <h2>Exercise and playtime for pomeranians</h2>
-        <p>Discover the best ways to keep your pomeranian active and entertained.</p>
-      </article>
-      <article>
-        <img src="pomeranian-3.jpg" alt="A pomeranian sitting on a couch">
-        <h2>Training your pomeranian</h2>
-        <p>Learn the most effective techniques for training your pomeranian.</p>
-      </article>
-    </section>
-  </main>
-  <footer>
-    <p>Copyright 2021 Pomeranian Blog</p>
-  </footer>
-</body>
-</html>
+<div id="pom-fact-generator">
+  <button id="pom-facts-button">Pom facts</button>
+  <div id="pom-fact">
+    <!-- Pom fact will be inserted here -->
+  </div>
+</div>
+
+<script>
+  const pomFactsButton = document.querySelector('#pom-facts-button');
+  const pomFact = document.querySelector('#pom-fact');
+
+  // Array of Pomeranian facts
+  const pomFacts = [
+    'Pomeranians are named after the Pomerania region in Europe.',
+    'Pomeranians are intelligent and easily trained.',
+    'Pomeranians are energetic and need daily exercise.',
+    'Pomeranians are known for their fluffy, long coats.',
+    'Pomeranians are considered small dogs, weighing between 3-7 pounds.'
+  ];
+
+  pomFactsButton.addEventListener('click', event => {
+    // Generate a random index to choose a Pomeranian fact
+    const randomIndex = Math.floor(Math.random() * pomFacts.length);
+
+    // Insert the Pomeranian fact into the element
+    pomFact.innerHTML = pomFacts[randomIndex];
+
+    // Toggle the visibility of the pom fact element
+    pomFact.style.display = pomFact.style.display === 'none' ? 'block' : 'none';
+  });
+</script>
