@@ -1,3 +1,50 @@
+/* Add a fade-in animation to the hero section */
+#hero {
+  animation: fadein 1s;
+}
+
+/* Add a hover effect to the buttons */
+button:hover {
+  background-color: #ffffff;
+  color: #ffa07a;
+  transform: scale(1.1);
+}
+
+/* Add a shake animation to the form when it's submitted with an error */
+form.error input,
+form.error textarea,
+form.error button {
+  animation: shake 0.5s;
+}
+
+/* Create the fade-in animation */
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Create the shake animation */
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+
+
+
 #pom-fact-generator {
   position: relative;
 }
