@@ -1,26 +1,26 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Lollipop Pom</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pomeranian Fan Blog</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <h1>Lollipop Pom</h1>
-      <p>A blog for Pomeranian and small dog owners</p>
+      <div class="container">
+        <h1 class="logo">Pomeranian Fan Blog</h1>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-    <div id="pom-fact-generator">
-  <button id="pom-facts-button">Pom facts</button>
-  <div id="pom-fact">
-    <!-- Pom fact will be inserted here -->
-  </div>
-</div>
+    </div>
 
 <script>
   const pomFactsButton = document.querySelector('#pom-facts-button');
@@ -46,28 +46,72 @@
     pomFact.style.display = pomFact.style.display === 'none' ? 'block' : 'none';
   });
 </script>
+   
     <main>
-      <h2>Latest Posts</h2>
-      <div class="post">
-        <h3>10 Fun Games to Play with Your Pomeranian</h3>
-        <p>Pomeranians are intelligent and playful dogs that love to have fun. Here are 10 games you can play with your Pom to keep them entertained and engaged...</p>
-        <button>Read More</button>
-      </div>
-      <div class="post">
-        <h3>5 Delicious and Nutritious Homemade Treats for Small Dogs</h3>
-        <p>Small dogs have tiny stomachs, so it's important to feed them high-quality, nutritious treats. Here are 5 easy and delicious homemade treat recipes that your small dog will love...</p>
-        <button>Read More</button>
-      </div>
+      <section id="hero">
+        <div class="container">
+          <h2>Welcome to the Pomeranian Fan Blog</h2>
+          <p>Here you'll find all the latest news, information, and resources about Pomeranians. Whether you're a seasoned owner or just considering getting a Pom, this is the place for you.</p>
+          <button>Explore the Blog</button>
+        </div>
+      </section>
+      <section id="about">
+        <div class="container">
+          <h2>About the Pomeranian Fan Blog</h2>
+          <p>The Pomeranian Fan Blog is a labor of love for Pomeranians and their owners. We believe that Pomeranians are truly special dogs and deserve to be celebrated. That's why we created this blog – to share information, stories, and resources about these amazing creatures.</p>
+          <p>We hope you enjoy exploring the Pomeranian Fan Blog and learning more about these wonderful animals. If you have any questions or comments, don't hesitate to reach out to us through the contact form or social media.</p>
+        </div>
+      </section>
+      <section id="blog-preview">
+        <div class="container">
+          <h2>Recent Posts</h2>
+          <div class="blog-preview-grid">
+            <div>
+              <img src="pom1.jpg" alt="A Pomeranian with a fluffy coat" />
+              <h3>5 Tips for Grooming Your Pomeranian</h3>
+              <p>Grooming your Pomeranian can be a fun bonding experience, but it's also important for keeping your Pom healthy and happy. Here are five tips for grooming your Pom like a pro:</p>
+            </div>
+            <div>
+              <img src="pom2.jpg" alt="A Pomeranian playing with a toy" />
+              <h3>The Top 10 Best Toys for Pomeranians</h3>
+              <p>Pomeranians are energetic and playful, which means they need plenty of stimulating toys to keep them entertained. Here are our picks for the top 10 best toys for Poms:</p>
+            </div>
+            <div>
+              <img src="pom3.jpg" alt="A Pomeranian wearing a sweater" />
+              <h3>How to Choose the Right Size Clothing for Your Pomeranian</h3>
+              <p>Pomeranians may be small, but they still need the right fit when it comes to clothing. Here's how to choose the right size clothing for your Pom:</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="container">
+          <h2>Contact Us</h2>
+          <p>We'd love to hear from you! Whether you have questions, comments, or just want to say hello, feel free to use the form below to get in touch.</p>
+          <form>
+            <label for="name">Name:</label><br />
+            <input type="text" id="name" /><br />
+            <label for="email">Email:</label><br />
+            <input type="email" id="email" /><br />
+            <label for="message">Message:</label><br />
+            <textarea id="message"></textarea><br />
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </section>
     </main>
     <footer>
-      <p>Copyright 2022 Lollipop Pom</p>
+      <div class="container">
+        <p>Copyright 2021 Pomeranian Fan Blog. All rights reserved.</p>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
     </footer>
-    <script src="script.js"></script>
   </body>
 </html>
-
-
-
 
 
 
