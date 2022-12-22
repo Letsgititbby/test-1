@@ -1,3 +1,31 @@
+#fact-generator {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+#fact-generator.active {
+  display: block;
+}
+
+#fact-generator button {
+  float: right;
+  background-color: transparent;
+  border: 0;
+  font-size: 1.5em;
+  color: #000000;
+  cursor: pointer;
+}
+
+
+
+
 /* Add a fade-in animation to the hero section */
 #hero {
   animation: fadein 1s;
@@ -45,41 +73,3 @@ form.error button {
 
 
 
-#pom-fact-generator {
-  position: relative;
-}
-
-#pom-fact {
-  display: none;
-  position: absolute;
-  top: 25px;
-  left: 0;
-  right: 0;
-  width: 300px;
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  font-size: 1.2em;
-  text-align: center;
-}
-
-#pom-fact-generator button {
-  display: block;
-  width: 200px;
-  margin: 0 auto;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #ffa07a;
-  color: #ffffff;
-  font-size: 1.2em;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#pom-fact-generator button:hover {
-  background-color: #ff7f50;
-}
