@@ -1,79 +1,94 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <title>Lollipop Pomeranian</title>
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <!-- Import the top app bar styles -->
+  <link rel="stylesheet" href="https://unpkg.com/@material/top-app-bar/dist/mdc.top-app-bar.css">
+  <!-- Import the icon button styles -->
+  <link rel="stylesheet" href="https://unpkg.com/@material/icon-button/dist/mdc.icon-button.css">
 </head>
 <body>
-  <div id="header">
-    <a href="/"><img src="/images/logo.png" alt="Logo" /></a>
-    <h1>Lollipop Pomeranian</h1>
-    <form>
-      <input type="text" placeholder="Search...">
-      <button type="submit">Go</button>
-    </form>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/poms">Pomeranians</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-  <div id="main">
-    <div id="masonry-grid">
-      <div class="masonry-item">
-        <img src="/images/pom1.jpg" alt="Pomeranian">
-        <h2>Pomeranian 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel dolor vel lacus aliquam tincidunt.</p>
-        <div class="tags">
-          <span>#pomeranian</span>
-          <span>#dog</span>
-          <span>#cute</span>
-        </div>
-      </div>
-      <div class="masonry-item">
-        <img src="/images/pom2.jpg" alt="Pomeranian">
-        <h2>Pomeranian 2</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel dolor vel lacus aliquam tincidunt.</p>
-        <div class="tags">
-          <span>#pomeranian</span>
-          <span>#dog</span>
-          <span>#cute</span>
-        </div>
-      </div>
-      <!-- Add more masonry items here -->
+  <!-- Top app bar -->
+  <header class="mdc-top-app-bar">
+    <div class="mdc-top-app-bar__row">
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+        <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Open navigation menu">menu</button>
+        <!-- Logo -->
+        <img src="logo.png" alt="Lollipop Pomeranian logo" class="mdc-top-app-bar__logo">
+        <span class="mdc-top-app-bar__title">Lollipop Pomeranian</span>
+      </section>
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+        <!-- Search bar -->
+        <form class="mdc-top-app-bar__search-form">
+          <input type="text" class="mdc-top-app-bar__search-input" placeholder="Search">
+          <button class="material-icons mdc-top-app-bar__search-icon mdc-icon-button" aria-label="Search">search</button>
+        </form>
+        <!-- Social media links -->
+        <a href="#" class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Facebook">facebook</a>
+        <a href="#" class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Instagram">instagram</a>
+      </section>
     </div>
-  </div>
-  <div id="sidebar">
-    <h3>Recent Posts</h3>
-    <ul>
-      <li><a href="#">Post 1</a></li>
-      <li><a href="#">Post 2</a></li>
-      <li><a href="#">Post 3</a></li>
-    </ul>
-    <h3>Popular Posts</h3>
-    <ul>
-      <li><a href="#">Post 1</a></li>
-      <li><a href="#">Post 2</a></li>
-      <li><a href="#">Post 3</a></li>
-        <div id="footer">
-    <form>
-      <input type="email" placeholder="Enter your email...">
-      <button type="submit">Sign Up</button>
+  </header>
+  <!-- Main content -->
+  <main class="mdc-top-app-bar--fixed-adjust">
+    <!-- Grid of blog posts -->
+    <div class="blog-post-grid">
+      <!-- Blog post 1 -->
+      <div class="blog-post-tile">
+        <img src="post-1-thumbnail.jpg" alt="Post 1 thumbnail" class="blog-post-tile__thumbnail">
+        <h2 class="blog-post-tile__title">Post 1 title</h2>
+        <p class="blog-post-tile__excerpt">Post 1
+excerpt goes here...</p>
+<div class="blog-post-tile__tags">
+<span class="blog-post-tile__tag">Tag 1</span>
+<span class="blog-post-tile__tag">Tag 2</span>
+<span class="blog-post-tile__tag">Tag 3</span>
+</div>
+</div>
+<!-- Blog post 2 -->
+<div class="blog-post-tile">
+<img src="post-2-thumbnail.jpg" alt="Post 2 thumbnail" class="blog-post-tile__thumbnail">
+<h2 class="blog-post-tile__title">Post 2 title</h2>
+<p class="blog-post-tile__excerpt">Post 2 excerpt goes here...</p>
+<div class="blog-post-tile__tags">
+<span class="blog-post-tile__tag">Tag 1</span>
+<span class="blog-post-tile__tag">Tag 4</span>
+<span class="blog-post-tile__tag">Tag 5</span>
+</div>
+</div>
+<!-- Add more blog post tiles here -->
+</div>
+
+  </main>
+  <!-- Footer -->
+  <footer>
+    <!-- Newsletter sign-up form -->
+    <form class="newsletter-sign-up-form">
+      <input type="email" placeholder="Enter your email address">
+      <button type="submit">Sign up</button>
     </form>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/poms">Pomeranians</a></li>
-      <li><a href="/contact">Contact</a></li>
-    </ul>
-    <ul>
-      <li><a href="#">Facebook</a></li>
-      <li><a href="#">Instagram</a></li>
-      <li><a href="#">Twitter</a></li>
-    </ul>
-  </div>
+    <!-- Links to different sections of the blog -->
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+    <!-- Social media links -->
+    <div class="social-media-links">
+      <a href="#" class="material-icons">facebook</a>
+      <a href="#" class="material-icons">instagram</a>
+      <a href="#" class="material-icons">twitter</a>
+    </div>
+  </footer>
+  <!-- Import the top app bar script -->
+  <script src="https://unpkg.com/
+               @material/top-app-bar/dist/mdc.top-app-bar.js"></script>
+
+  <!-- Import the icon button script -->
+  <script src="https://unpkg.com/@material/icon-button/dist/mdc.icon-button.js"></script>
+  <!-- Initialize the top app bar -->
+  <script>
+    const topAppBarElement = document.querySelector('.mdc-top-app-bar');
+    const topAppBar = new mdc.topAppBar.MDCTopAppBar(topAppBarElement);
+  </script>
 </body>
 </html>
+```
