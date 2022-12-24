@@ -88,6 +88,49 @@
   </div>
 </body>
 </html>
+// Add dynamic animation to post buttons
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach(button => {
+  button.addEventListener('mouseenter', event => {
+    event.target.style.transform = 'scale(1.1)';
+  });
+
+  button.addEventListener('mouseleave', event => {
+    event.target.style.transform = 'scale(1)';
+  });
+});
+<div id="pom-fact-generator">
+  <button id="pom-facts-button">Pom facts</button>
+  <div id="pom-fact">
+    <!-- Pom fact will be inserted here -->
+  </div>
+</div>
+
+<script>
+  const pomFactsButton = document.querySelector('#pom-facts-button');
+  const pomFact = document.querySelector('#pom-fact');
+
+  // Array of Pomeranian facts
+  const pomFacts = [
+    'Pomeranians are named after the Pomerania region in Europe.',
+    'Pomeranians are intelligent and easily trained.',
+    'Pomeranians are energetic and need daily exercise.',
+    'Pomeranians are known for their fluffy, long coats.',
+    'Pomeranians are considered small dogs, weighing between 3-7 pounds.'
+  ];
+
+  pomFactsButton.addEventListener('click', event => {
+    // Generate a random index to choose a Pomeranian fact
+    const randomIndex = Math.floor(Math.random() * pomFacts.length);
+
+    // Insert the Pomeranian fact into the element
+    pomFact.innerHTML = pomFacts[randomIndex];
+
+    // Toggle the visibility of the pom fact element
+    pomFact.style.display = pomFact.style.display === 'none' ? 'block' : 'none';
+  });
+</script>
 
    
 
