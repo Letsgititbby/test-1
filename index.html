@@ -131,6 +131,73 @@ buttons.forEach(button => {
     pomFact.style.display = pomFact.style.display === 'none' ? 'block' : 'none';
   });
 </script>
+<div id="fact-generator">
+  <button onclick="hideGenerator()">&times;</button>
+  <h2>Pomeranian Fact</h2>
+  <div id="fact"></div>
+</div>
+function generateFact() {
+  // An array of Pomeranian facts
+  const facts = [
+    "Pomeranians are named after the region of Pomerania in modern-day Poland and Germany.",
+    "Pomeranians are descendants of large sled dogs, but have been bred down to their small size over time.",
+    "Pomeranians have a double coat, with a soft undercoat and a thicker outer coat.",
+    "Pomeranians are known for their playful and energetic personalities.",
+    "Pomeranians are intelligent and can be trained to do a variety of tricks and tasks.",
+    "Pomeranians are affectionate and make great companions for people of all ages."
+  ];
+
+  // Generate a random index based on the length of the facts array
+  const randomIndex = Math.floor(Math.random() * facts.length);
+
+  // Get the fact at the random index
+  const fact = facts[randomIndex];
+
+  // Get the element to display the fact
+  const factElement = document.getElementById("fact");
+
+  // Set the text content of the element to the fact
+  factElement.textContent = fact;
+}
+
+function showGenerator() {
+  // Get the fact generator element
+  const generator = document.getElementById("fact-generator");
+
+  // Add the active class to the element
+  generator.classList.add("active");
+}
+
+function hideGenerator() {
+  // Get the fact generator element
+  const generator = document.getElementById("fact-generator");
+
+  // Remove the active class from the element
+  generator.classList.remove("active");
+}
+
+// Show the fact generator when the user scrolls to the middle of the page
+window.onscroll = function() {
+  const scrollY = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const bodyHeight = document.body.offsetHeight;
+
+  if (
+window.onscroll = function() {
+  const scrollY = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const bodyHeight = document.body.offsetHeight;
+
+  if (scrollY + windowHeight > bodyHeight / 2) {
+    showGenerator();
+  }
+};
+
+#pom-fact-generator button:hover {
+  background-color: #ff7f50;
+}
+
+
 
    
 
