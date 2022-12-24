@@ -4,6 +4,17 @@
   <title>Lollipop Pomeranian</title>
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
+<!-- Import the Material Components for the web CSS and JS -->
+<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+<!-- Add a button element with the class "foo-button" -->
+<button class="foo-button">Click me</button>
+
+<!-- Initialize the ripple effect -->
+<script>
+  mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
+</script>
 <body>
   <div id="header">
     <a href="/"><img src="/images/logo.png" alt="Logo" /></a>
@@ -24,7 +35,7 @@
   <div id="main">
     <div id="masonry-grid">
       <div class="masonry-item">
-        <img src="/Users/davidmiller/Desktop/Pseries/pom1.jpg" alt="Pomeranian">
+        <img src="/Desktop/Python/Site.html/pom1.jpg" alt="Pomeranian">
         <h2>Pomeranian 1</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel dolor vel lacus aliquam tincidunt.</p>
         <div class="tags">
@@ -34,7 +45,7 @@
         </div>
       </div>
       <div class="masonry-item">
-        <img src="/Users/davidmiller/Desktop/Pseries/pom2.jpg" alt="Pomeranian">
+        <img src="/Desktop/Python/Site.html/pom2.jpg" alt="Pomeranian">
         <h2>Pomeranian 2</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel dolor vel lacus aliquam tincidunt.</p>
         <div class="tags">
@@ -77,5 +88,8 @@
   </div>
 </body>
 </html>
+
+   
+
 
    
